@@ -61,12 +61,6 @@ const cardVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 15,
-      duration: 0.6
-    }
   }
 }
 
@@ -74,11 +68,6 @@ const iconVariants = {
   hover: {
     scale: 1.1,
     rotate: 5,
-    transition: {
-      type: "spring",
-      stiffness: 400,
-      damping: 10
-    }
   }
 }
 
@@ -116,13 +105,18 @@ export default function PortfolioProjects() {
           className="grid gap-8 md:gap-10 grid-cols-1 lg:grid-cols-3"
         >
           {projects.map((project, index) => (
-            <motion.div key={project.title} variants={cardVariants}>
+            <motion.div 
+              key={project.title} 
+              variants={cardVariants}
+              transition={{ type: "spring", stiffness: 100, damping: 15, duration: 0.6 }}
+            >
               <Card className="bg-surface h-full group hover:shadow-2xl transition-all duration-500 ease-out border-border hover:border-accent/30 hover:-translate-y-2">
                 <CardHeader className="space-y-6">
                   <div className="flex items-center justify-between">
                     <motion.div
                       variants={iconVariants}
                       whileHover="hover"
+                      transition={{ type: "spring", stiffness: 400, damping: 10 }}
                       className="p-3 bg-gradient-to-br from-accent/20 to-primary/20 rounded-lg"
                     >
                       <project.icon className="h-8 w-8 text-accent" />

@@ -30,10 +30,6 @@ const AnimatedLandingPage = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      },
     },
   };
 
@@ -42,11 +38,6 @@ const AnimatedLandingPage = () => {
     animate: {
       y: [-20, 20, -20],
       rotate: [0, 180, 360],
-      transition: {
-        duration: 6,
-        ease: "easeInOut",
-        repeat: Infinity,
-      },
     },
   };
 
@@ -55,11 +46,6 @@ const AnimatedLandingPage = () => {
     animate: {
       x: [-30, 30, -30],
       y: [-15, 15, -15],
-      transition: {
-        duration: 8,
-        ease: "easeInOut",
-        repeat: Infinity,
-      },
     },
   };
 
@@ -74,26 +60,28 @@ const AnimatedLandingPage = () => {
         variants={floatingVariants}
         initial="initial"
         animate="animate"
+        transition={{ duration: 6, ease: "easeInOut", repeat: Infinity }}
       />
       <motion.div
         className="absolute top-1/3 right-1/4 w-2 h-2 bg-accent/30 rounded-full"
         variants={floatingVariants2}
         initial="initial"
         animate="animate"
+        transition={{ duration: 8, ease: "easeInOut", repeat: Infinity, delay: 1 }}
       />
       <motion.div
         className="absolute bottom-1/4 left-1/3 w-4 h-4 bg-purple-500/20 rounded-full"
         variants={floatingVariants}
         initial="initial"
         animate="animate"
-        transition={{ delay: 2 }}
+        transition={{ duration: 6, ease: "easeInOut", repeat: Infinity, delay: 2 }}
       />
       <motion.div
         className="absolute top-1/2 right-1/3 w-6 h-6 border border-primary/20 rounded-full"
         variants={floatingVariants2}
         initial="initial"
         animate="animate"
-        transition={{ delay: 1 }}
+        transition={{ duration: 8, ease: "easeInOut", repeat: Infinity, delay: 1 }}
       />
       <motion.div
         className="absolute bottom-1/3 right-1/4 w-3 h-3 bg-accent/25 rounded-full"
@@ -114,6 +102,7 @@ const AnimatedLandingPage = () => {
         <motion.h1
           className="text-5xl md:text-7xl lg:text-8xl font-bold mb-4"
           variants={itemVariants}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <span className="ai-gradient">Mudit Gupta</span>
         </motion.h1>
@@ -122,6 +111,7 @@ const AnimatedLandingPage = () => {
         <motion.h2
           className="text-xl md:text-2xl lg:text-3xl text-secondary mb-6 font-medium"
           variants={itemVariants}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
           AI Engineer & Data Science Student
         </motion.h2>
@@ -130,6 +120,7 @@ const AnimatedLandingPage = () => {
         <motion.p
           className="text-lg md:text-xl text-secondary/80 max-w-2xl mx-auto mb-12 leading-relaxed"
           variants={itemVariants}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
           Transforming ideas into intelligent solutions through AI innovation and startup development
         </motion.p>
@@ -138,6 +129,7 @@ const AnimatedLandingPage = () => {
         <motion.div
           className="flex flex-wrap justify-center gap-4 md:gap-6"
           variants={itemVariants}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
         >
           <Button
             size="lg"
