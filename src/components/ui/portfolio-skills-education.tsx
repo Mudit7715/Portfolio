@@ -1,8 +1,8 @@
 "use client"
 
-import { Badge } from "@/components/ui/badge"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Progress } from "@/components/ui/progress"
+import { Badge } from "./badge"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./card"
+import { Progress } from "./progress"
 import { GraduationCap, Award, Code2, Database, Brain, Wrench, Star, Bot, Zap, Cpu, Network } from "lucide-react"
 
 interface SkillItemProps {

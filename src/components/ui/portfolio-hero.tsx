@@ -2,7 +2,7 @@
 
 import { motion } from "motion/react";
 import { Brain, Bot, Zap, Download, ExternalLink, Github, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./button";
 
 export const HeroSection = () => {
   // Function to scroll to projects section

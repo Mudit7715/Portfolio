@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "motion/react";
-import { Button } from "@/components/ui/button";
+import { Button } from "./button";
 import { Github, Linkedin, Download, Mail } from "lucide-react";
 
 const AnimatedLandingPage = () => {
